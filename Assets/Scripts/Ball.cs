@@ -36,7 +36,7 @@ public class Ball : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("YEEEEEEEEEEEEEEEEEEEE " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag(pThrow ? "AI" : "Player") && canHitPlayer)
+        if ((collision.gameObject.CompareTag(pThrow ? "AI" : "Player") || collision.gameObject.layer == 4) && canHitPlayer)
         {
             ScoreKeeper.Instance.Punish(collision.gameObject.GetComponent<Player>());
         }
