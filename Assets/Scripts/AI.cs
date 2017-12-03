@@ -25,8 +25,10 @@ public class AI : MonoBehaviour {
 
     private void Start()
     {
-        r = GetComponent<Rigidbody>();
+        isFuckingDead = false;
+        Debug.Log(shield == null);
         shield.SetActive(false);
+        r = GetComponent<Rigidbody>();
     }
 
     void Update ()
@@ -97,20 +99,20 @@ public class AI : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    private void OnDrawGizmos()
-    {
-        Vector3 previousDrawPoint = tracked.transform.position;
+    //private void OnDrawGizmos()
+    //{
+    //    Vector3 previousDrawPoint = tracked.transform.position;
 
-        int resolution = 30;
-        for (int i = 1; i <= resolution; i++)
-        {
-            float simulationTime = i / (float)resolution * cur.timeToTarget;
-            Vector3 displacement = cur.initialVelocity * simulationTime + Vector3.up * -9.81f * simulationTime * simulationTime / 2f;
-            Vector3 drawPoint = tracked.transform.position + displacement;
-            Debug.DrawLine(previousDrawPoint, drawPoint, Color.green);
-            previousDrawPoint = drawPoint;
-        }
-    }
+    //    int resolution = 30;
+    //    for (int i = 1; i <= resolution; i++)
+    //    {
+    //        float simulationTime = i / (float)resolution * cur.timeToTarget;
+    //        Vector3 displacement = cur.initialVelocity * simulationTime + Vector3.up * -9.81f * simulationTime * simulationTime / 2f;
+    //        Vector3 drawPoint = tracked.transform.position + displacement;
+    //        Debug.DrawLine(previousDrawPoint, drawPoint, Color.green);
+    //        previousDrawPoint = drawPoint;
+    //    }
+    //}
 
     List<Ball> OrderBalls()
     {

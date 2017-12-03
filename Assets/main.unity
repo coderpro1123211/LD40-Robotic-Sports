@@ -216,6 +216,7 @@ MonoBehaviour:
   neutral: {fileID: 2800000, guid: cecd3351715fa4842a270a77d7c44657, type: 3}
   happy: {fileID: 2800000, guid: 679a67b1db04bac4fabb6107d03b1de8, type: 3}
   face: {fileID: 2100000, guid: 07ab5522857bf6043973a02ef7e67b81, type: 2}
+  actualP: {fileID: 978394205}
 --- !u!114 &12514649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,9 @@ MonoBehaviour:
   ai: {fileID: 778714460}
   crosshair: {fileID: 1932834440}
   text: {fileID: 1691552486}
+  low: {fileID: 8300000, guid: 1dcba8d3c376ad3428b18760686bd8d7, type: 3}
+  high: {fileID: 8300000, guid: f6dbaa145c149d04fb08ea7377a20750, type: 3}
+  music: {fileID: 2029105577}
 --- !u!1 &14280868
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +315,7 @@ GameObject:
   - component: {fileID: 14280872}
   - component: {fileID: 14280871}
   - component: {fileID: 14280870}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +421,7 @@ GameObject:
   - component: {fileID: 19651472}
   - component: {fileID: 19651471}
   - component: {fileID: 19651470}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +708,7 @@ GameObject:
   - component: {fileID: 95886350}
   - component: {fileID: 95886349}
   - component: {fileID: 95886348}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +814,7 @@ GameObject:
   - component: {fileID: 119892933}
   - component: {fileID: 119892932}
   - component: {fileID: 119892931}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +932,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 123860447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29000092, y: 14.112, z: 0}
+  m_LocalPosition: {x: 0, y: 9.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 85123071}
@@ -936,8 +940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.29000092, y: 14.112}
-  m_SizeDelta: {x: -17.67, y: 18.036}
+  m_AnchoredPosition: {x: -0.00000095367, y: 9.4}
+  m_SizeDelta: {x: 0, y: 18.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123860449
 MonoBehaviour:
@@ -968,10 +972,12 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: YOUR health
+  m_Text: 'YOUR health
+
+'
 --- !u!222 &123860450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1018,7 +1024,7 @@ GameObject:
   - component: {fileID: 152177140}
   - component: {fileID: 152177139}
   - component: {fileID: 152177138}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1130,7 @@ GameObject:
   - component: {fileID: 156645539}
   - component: {fileID: 156645538}
   - component: {fileID: 156645537}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1235,7 @@ GameObject:
   - component: {fileID: 186728950}
   - component: {fileID: 186728949}
   - component: {fileID: 186728948}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1284,7 @@ SphereCollider:
   m_GameObject: {fileID: 186728947}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1342,7 +1348,7 @@ GameObject:
   - component: {fileID: 230324698}
   - component: {fileID: 230324697}
   - component: {fileID: 230324696}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1532,7 +1538,7 @@ GameObject:
   - component: {fileID: 331298762}
   - component: {fileID: 331298761}
   - component: {fileID: 331298760}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,7 +1678,7 @@ GameObject:
   - component: {fileID: 352380532}
   - component: {fileID: 352380531}
   - component: {fileID: 352380530}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1852,7 @@ GameObject:
   - component: {fileID: 366960923}
   - component: {fileID: 366960922}
   - component: {fileID: 366960921}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2120,7 @@ GameObject:
   - component: {fileID: 489133919}
   - component: {fileID: 489133918}
   - component: {fileID: 489133917}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2220,7 +2226,7 @@ GameObject:
   - component: {fileID: 548432262}
   - component: {fileID: 548432261}
   - component: {fileID: 548432260}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2332,7 @@ GameObject:
   - component: {fileID: 563553256}
   - component: {fileID: 563553255}
   - component: {fileID: 563553254}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2501,7 +2507,7 @@ GameObject:
   - component: {fileID: 575393433}
   - component: {fileID: 575393432}
   - component: {fileID: 575393431}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,7 +2613,7 @@ GameObject:
   - component: {fileID: 586436182}
   - component: {fileID: 586436181}
   - component: {fileID: 586436180}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2901,7 +2907,7 @@ GameObject:
   - component: {fileID: 749094248}
   - component: {fileID: 749094247}
   - component: {fileID: 749094246}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3019,16 +3025,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 751770869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08602905, y: 26.01, z: 0}
+  m_LocalPosition: {x: -0.0010070801, y: 19.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1135099303}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -207.001, y: 26.01}
-  m_SizeDelta: {x: 414.18, y: 10.95}
+  m_AnchoredPosition: {x: -0.0010070801, y: 19.12}
+  m_SizeDelta: {x: 0.18, y: 38.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751770871
 MonoBehaviour:
@@ -3059,10 +3065,12 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: DEFLECTOR charge
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 0.2
+  m_Text: 'DEFLECTOR charge
+
+'
 --- !u!222 &751770872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3111,7 +3119,7 @@ GameObject:
   - component: {fileID: 778714456}
   - component: {fileID: 778714455}
   - component: {fileID: 778714460}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: AI
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -3270,7 +3278,7 @@ MonoBehaviour:
   balls: []
   ballPos: {fileID: 1028942628}
   shield: {fileID: 186728947}
-  speed: 4
+  speed: 4.5
   timeBetweenTicks: 1
   p: {fileID: 978394205}
   graphics: {fileID: 991396540}
@@ -3287,7 +3295,7 @@ GameObject:
   - component: {fileID: 820682146}
   - component: {fileID: 820682145}
   - component: {fileID: 820682144}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3393,7 +3401,7 @@ GameObject:
   - component: {fileID: 866127712}
   - component: {fileID: 866127711}
   - component: {fileID: 866127710}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3507,7 @@ GameObject:
   - component: {fileID: 884744951}
   - component: {fileID: 884744950}
   - component: {fileID: 884744949}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3633,7 +3641,7 @@ GameObject:
   - component: {fileID: 885803247}
   - component: {fileID: 885803246}
   - component: {fileID: 885803245}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3836,6 +3844,26 @@ Prefab:
       propertyPath: rayLayers.m_Bits
       value: 4098
       objectReference: {fileID: 0}
+    - target: {fileID: 1849785617046576, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943027554686140, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173502803465918, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1328308944896560, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610157722796978, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3921f4d882491a44e83fb4d6bb873990, type: 2}
   m_IsPrefabParent: 0
@@ -3851,7 +3879,7 @@ GameObject:
   - component: {fileID: 898835043}
   - component: {fileID: 898835042}
   - component: {fileID: 898835041}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3962,7 +3990,7 @@ GameObject:
   - component: {fileID: 991396543}
   - component: {fileID: 991396542}
   - component: {fileID: 991396541}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4039,7 +4067,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1028942628}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: BallPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,7 +4100,7 @@ GameObject:
   - component: {fileID: 1042519449}
   - component: {fileID: 1042519448}
   - component: {fileID: 1042519447}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4178,7 +4206,7 @@ GameObject:
   - component: {fileID: 1068432154}
   - component: {fileID: 1068432153}
   - component: {fileID: 1068432152}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4284,7 +4312,7 @@ GameObject:
   - component: {fileID: 1095868725}
   - component: {fileID: 1095868724}
   - component: {fileID: 1095868723}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4393,7 +4421,7 @@ GameObject:
   - component: {fileID: 1118535344}
   - component: {fileID: 1118535343}
   - component: {fileID: 1118535348}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4677,7 +4705,7 @@ GameObject:
   - component: {fileID: 1182150231}
   - component: {fileID: 1182150230}
   - component: {fileID: 1182150229}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4845,7 @@ GameObject:
   - component: {fileID: 1220814739}
   - component: {fileID: 1220814738}
   - component: {fileID: 1220814737}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4951,7 +4979,7 @@ GameObject:
   - component: {fileID: 1226954618}
   - component: {fileID: 1226954617}
   - component: {fileID: 1226954616}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5071,16 +5099,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321696908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000030517578, y: 0.04750824, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1504805618}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.24221067, y: 0.3637527}
+  m_AnchorMax: {x: 0.7602107, y: 0.6343011}
+  m_AnchoredPosition: {x: -0.99998474, y: 0.5}
+  m_SizeDelta: {x: -0.5, y: 0.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321696910
 MonoBehaviour:
@@ -5105,7 +5133,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 984e057d4542fc747b3d9763f51304e0, type: 3}
     m_FontSize: 47
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 76
     m_Alignment: 4
@@ -5113,7 +5141,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 15
+    m_LineSpacing: 30
   m_Text: 'YOU lost
 
     play AGAIN?'
@@ -5134,8 +5162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce777f9ade739e468811d86eb91a72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  val: 15
+  val: 30
   text: {fileID: 1321696910}
+  crosshair: {fileID: 1932834440}
 --- !u!95 &1321696913
 Animator:
   serializedVersion: 3
@@ -5165,7 +5194,7 @@ GameObject:
   - component: {fileID: 1348802823}
   - component: {fileID: 1348802822}
   - component: {fileID: 1348802821}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5517,7 +5546,7 @@ GameObject:
   - component: {fileID: 1498092216}
   - component: {fileID: 1498092215}
   - component: {fileID: 1498092214}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5657,7 +5686,7 @@ GameObject:
   - component: {fileID: 1528674938}
   - component: {fileID: 1528674937}
   - component: {fileID: 1528674936}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5763,7 +5792,7 @@ GameObject:
   - component: {fileID: 1537882088}
   - component: {fileID: 1537882087}
   - component: {fileID: 1537882086}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5955,7 +5984,7 @@ GameObject:
   - component: {fileID: 1564395921}
   - component: {fileID: 1564395920}
   - component: {fileID: 1564395919}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6346,7 +6375,7 @@ GameObject:
   - component: {fileID: 1695842425}
   - component: {fileID: 1695842424}
   - component: {fileID: 1695842423}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6448,7 +6477,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1785768024}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_Fractured
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6555,7 +6584,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1916144026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.399999, z: 0}
+  m_LocalPosition: {x: 0, y: 10.402, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1349798098}
@@ -6563,8 +6592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10.4}
-  m_SizeDelta: {x: -2, y: 20.81}
+  m_AnchoredPosition: {x: 0, y: 10.402}
+  m_SizeDelta: {x: -2, y: 20.805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916144028
 MonoBehaviour:
@@ -6595,10 +6624,12 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ENEMY health
+  m_Text: 'ENEMY health
+
+'
 --- !u!222 &1916144029
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6769,7 +6800,7 @@ GameObject:
   - component: {fileID: 2009771057}
   - component: {fileID: 2009771056}
   - component: {fileID: 2009771055}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6863,6 +6894,115 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2009771053}
   m_Mesh: {fileID: 4300262, guid: bcb907581005666429bfdf1cb7683167, type: 3}
+--- !u!1 &2029105576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2029105578}
+  - component: {fileID: 2029105577}
+  m_Layer: 0
+  m_Name: main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2029105577
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029105576}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d7ba1722f983b6947b47a303fd267120, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &2029105578
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029105576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046974992
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,7 +7015,7 @@ GameObject:
   - component: {fileID: 2046974996}
   - component: {fileID: 2046974995}
   - component: {fileID: 2046974994}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Robot_NOMIRROR_cell_032
   m_TagString: Untagged
   m_Icon: {fileID: 0}

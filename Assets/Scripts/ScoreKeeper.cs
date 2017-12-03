@@ -14,6 +14,8 @@ public class ScoreKeeper : MonoBehaviour {
     public Texture2D happy;
     public Material face;
 
+    public Player actualP;
+
     public static ScoreKeeper Instance { get; private set; }
 
     private void Awake()
@@ -43,10 +45,9 @@ public class ScoreKeeper : MonoBehaviour {
             }
             return;
         }
-        var f = p.fpsc.movementSettings.ForwardSpeed;
-        var b = p.fpsc.movementSettings.BackwardSpeed;
-        var sp = p.fpsc.movementSettings.StrafeSpeed;
         Debug.Log("geeeeeeeeeeetttt dunkkkkked onn");
+        Debug.LogWarning("Player Name: " + player.gameObject.name);
+        Debug.LogWarning("AI: " + player.isAi);
         if (player.isAi)
         {
             face.SetTexture("_EmissionMap", angry);
@@ -54,7 +55,7 @@ public class ScoreKeeper : MonoBehaviour {
             float origSpd = player.GetComponent<AI>().speed;
             player.GetComponent<AI>().EnableShield();
             player.GetComponent<AI>().speed = origSpd * Mathf.Clamp01(1.1f - ballsNormalized);
-            StartCoroutine(ResetPlayer(null, null, p, ballsNormalized * 10, origSpd, b, sp, true));
+            StartCoroutine(ResetPlayer(null, null, p, ballsNormalized * 10, origSpd, 0, 0, true));
             return;
         }
         else
@@ -64,6 +65,9 @@ public class ScoreKeeper : MonoBehaviour {
         }
         if (player.gettingDunked || !player.canGetDunked) return;
 
+        var f = p.fpsc.movementSettings.ForwardSpeed;
+        var b = p.fpsc.movementSettings.BackwardSpeed;
+        var sp = p.fpsc.movementSettings.StrafeSpeed;
         var pp = p.GetComponentInChildren<PostProcessingBehaviour>().profile;
 
         var nf = Mathf.Clamp01(1.1f - ballsNormalized) * f;
@@ -113,5 +117,19 @@ public class ScoreKeeper : MonoBehaviour {
         pl.gettingDunked = false;
         face.SetTexture("_EmissionMap", neutral);
         if (eff != null) eff.enabled = false;
+    }
+
+    public void ResetPlayerNow()
+    {
+        var p = actualP.GetComponentInChildren<PostProcessingBehaviour>().profile;
+        actualP.GetComponentInChildren<ImageEffect>().enabled = false;
+
+        var s = p.vignette.settings;
+        s.intensity = 0.2f;
+        p.vignette.settings = s;
+
+        var s2 = p.grain.settings;
+        s2.intensity = 0.18f;
+        p.grain.settings = s2;
     }
 }

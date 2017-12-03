@@ -36,9 +36,10 @@ public class Player : MonoBehaviour {
         fpsc = GetComponent<RigidbodyFirstPersonController>();
         imgE = GetComponentInChildren<ImageEffect>();
 
-        imgE.enabled = false;
+        canGetDunked = true;
+        gettingDunked = false;
 
-        GameObject.Find("Overview").SetActive(false);
+        imgE.enabled = false;
 	}
 	
 	// Update is called once per frame

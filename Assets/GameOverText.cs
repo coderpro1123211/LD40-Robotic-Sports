@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameOverText : MonoBehaviour {
     public float val;
     public Text text;
+    public Image crosshair;
     Animator anim;
     bool gameEnd;
 
@@ -25,10 +26,14 @@ public class GameOverText : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 	}
 
@@ -36,6 +41,8 @@ public class GameOverText : MonoBehaviour {
     {
         text.text = "YOU " + state + "\nplay AGAIN?\n\n[ENTER]yes    [ESC]no";
         anim.SetTrigger("gameend");
+        crosshair.enabled = false;
+        FindObjectOfType<ScoreKeeper>().ResetPlayerNow();
 
         gameEnd = true;
     }
